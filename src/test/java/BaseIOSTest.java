@@ -10,11 +10,11 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseIOSTest {
 
-	public static void main(String[] args) throws MalformedURLException {
+	public static IOSDriver<?> DesiredCapabilities () throws MalformedURLException {
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.2");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 12 Pro");
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
 		capabilities.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
@@ -23,6 +23,7 @@ public class BaseIOSTest {
 		
 		IOSDriver<?> driver = new IOSDriver<>(new URL("http://192.168.0.119:4723/wd/hub"), capabilities);
 		
+		return driver;
 
 	}
 
