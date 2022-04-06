@@ -1,5 +1,6 @@
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,6 +23,8 @@ public class BaseIOSTest {
 		capabilities.setCapability(MobileCapabilityType.APP, "/Users/wusdor/Library/Developer/Xcode/DerivedData/UIKitCatalog-fuqqnurytfubltaolqdbgrtgwkln/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
 		
 		IOSDriver<?> driver = new IOSDriver<>(new URL("http://192.168.0.119:4723/wd/hub"), capabilities);
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		return driver;
 
