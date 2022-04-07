@@ -10,7 +10,7 @@ public class AppiumClickTest extends BaseIOSTest {
 
 		IOSDriver<?> driver = DesiredCapabilities();
 
-		driver.findElementByAccessibilityId("Alert Views").click();
+		driver.findElementByAccessibilityId("Alert Views").click(); // accessibilityId - more stable locator
 		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Text Entry\"]")).click();
 		driver.findElementByXPath("//XCUIElementTypeCell").sendKeys("Hello");
 		driver.findElementByAccessibilityId("OK").click();
