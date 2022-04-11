@@ -20,8 +20,9 @@ public class BaseIOSTest {
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
 		capabilities.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
 		capabilities.setCapability("commandTimeouts", "12000");
-		capabilities.setCapability(MobileCapabilityType.APP, "/Users/wusdor/Library/Developer/Xcode/DerivedData/UIKitCatalog-fuqqnurytfubltaolqdbgrtgwkln/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
-		
+		//capabilities.setCapability(MobileCapabilityType.APP, "/Users/wusdor/Library/Developer/Xcode/DerivedData/UIKitCatalog-fuqqnurytfubltaolqdbgrtgwkln/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
+		capabilities.setCapability(MobileCapabilityType.APP, "/Users/wusdor/Library/Developer/Xcode/DerivedData/longtap-aeehjlkerlebpeegdhdvkmoitjat/Build/Products/Debug-iphonesimulator/longtap.app");
+
 		IOSDriver<?> driver = new IOSDriver<>(new URL("http://192.168.0.119:4723/wd/hub"), capabilities);
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

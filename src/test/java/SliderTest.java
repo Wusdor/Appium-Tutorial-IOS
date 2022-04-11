@@ -25,7 +25,8 @@ public class SliderTest extends BaseIOSTest {
 		String sliderValue = slider.getAttribute("value");
 		
 		System.out.println(sliderValue);
-
+		//Assert.assertEquals(sliderValue, "100 %");
+		
 		if (sliderValue.equals("100 %")) {
 
 			Assert.assertEquals(sliderValue, "100 %");
