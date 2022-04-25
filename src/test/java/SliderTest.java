@@ -9,7 +9,7 @@ public class SliderTest extends BaseIOSTest {
 
 	public static void main(String[] args) throws MalformedURLException {
 
-		IOSDriver<?> driver = DesiredCapabilities();
+		IOSDriver<?> driver = DesiredCapabilities("simulator");
 
 		driver.findElementByAccessibilityId("Sliders").click();
 
@@ -21,16 +21,12 @@ public class SliderTest extends BaseIOSTest {
 
 		slider.setValue("0%");
 		slider.setValue("1%"); // setValue method takes values from 0 to 1; if you want 42 => 0.42
-		
+
 		String sliderValue = slider.getAttribute("value");
-		
-		System.out.println(sliderValue);
-		//Assert.assertEquals(sliderValue, "100 %");
-		
-		if (sliderValue.equals("100 %")) {
 
-			Assert.assertEquals(sliderValue, "100 %");
+		if (sliderValue.equals("100%")) {
 
+			Assert.assertEquals(sliderValue, "100%");
 			System.out.println("Right value!");
 
 		} else {

@@ -11,7 +11,7 @@ public class ScrollTest extends BaseIOSTest {
 
 	public static void main(String[] args) throws MalformedURLException {
 
-		IOSDriver<?> driver = DesiredCapabilities();
+		IOSDriver<?> driver = DesiredCapabilities("real");
 
 		// scroll
 

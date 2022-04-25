@@ -13,7 +13,7 @@ public class LongPressTap extends BaseIOSTest {
 
 	public static void main(String[] args) throws MalformedURLException {
 
-		IOSDriver<?> driver = DesiredCapabilities();
+		IOSDriver<?> driver = DesiredCapabilities("simulator");
 
 		MobileElement longPress = (MobileElement) driver.findElementByName("Long tap");
 

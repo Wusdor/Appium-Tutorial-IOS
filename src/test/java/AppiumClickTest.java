@@ -8,7 +8,7 @@ public class AppiumClickTest extends BaseIOSTest {
 
 	public static void main(String[] args) throws MalformedURLException {
 
-		IOSDriver<?> driver = DesiredCapabilities();
+		IOSDriver<?> driver = DesiredCapabilities("simulator");
 
 		driver.findElementByAccessibilityId("Alert Views").click(); // accessibilityId - more stable locator
 		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Text Entry\"]")).click();
